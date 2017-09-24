@@ -1,0 +1,27 @@
+1. Getting natural language text in an input file.
+
+2. Extracting Keyphrases.
+
+	2.1 Step words removal. Tokenization. 
+
+	2.2. Making a graph(Undirected and unweighted) out of the token stream. A vertex in a graph is either 1-gram or 2-gram or n-gram. We then provide each vertex of the graph an initial score 1 and the ranking algorihtm is run on the graph for several iterations till convergene(0.0001).
+
+		2.2.1 The ranking algorithm is a way of deciding the importance of a vertex within a graph, based on global information recursively drawn from the entire graph. The ranking algorithm decides a score as the equation given by (Brin and Page, 1998). 
+
+		Overall:
+		i. Identify text units that best define the task at hand, and add them as vertices in the graph.   
+		
+		ii. Identify relations that connect such text units, and use these relations to draw edges between vertices in the graph. Edges can be directed or undirected, weighted or unweighted.
+		(Section 3.1 in Mihalcea et. al)
+		iii. Iterate the graph-based ranking algorithm until convergence. (Section 3.1 in Mihalcea et. al)
+
+	2.3 Vertices are sorted in order of score and top T vertices are chosen as keyphrase. 	
+
+
+3. Selecting Images for the pictuable keyphrases.
+
+4. Placing the images as given constraints.
+
+5. Producing the image.
+
+	
