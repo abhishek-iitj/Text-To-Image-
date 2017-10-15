@@ -1,1 +1,1 @@
-There is a circle of radius 10cm. It is red in color. 
+There is a circle of radius 10cm. It is red in color. A rectangle of width 10cm and widht 10cm is above the circle.
