@@ -1,1 +1,1 @@
-There is a circle of radius 10cm. It is red in color. A rectangle of width 10cm and widht 10cm is above the circle.
+There is a circle and rectangle of radius 10cm and length 5cm and width 20cm respectively. The circle is red and rectangle is green. The circle is above the rectangle.
