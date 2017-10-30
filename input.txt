@@ -1,1 +1,1 @@
-There is a circle and rectangle of radius 10cm and length 5cm and width 20cm respectively. The circle is red and rectangle is green. The circle is above the rectangle.
+Draw a circle of green color and 100cm in radius. A rectangle of color blue and having dimensions of 300cm in length and width 200cm.

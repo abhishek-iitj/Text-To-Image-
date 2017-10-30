@@ -70,7 +70,6 @@ if (recTangle > 0):
             cnt += 1
     print recTangle
     for i in range(0,recTangle):
-        print ("hii")
         Rectangle = rectangle.rectangle(rectangleColor,rectangleLength,rectangleWidth)
         Rectangle.drawRectangle()
 
