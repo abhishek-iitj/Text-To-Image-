@@ -1,0 +1,1 @@
+Draw a rectangle having length 20cm and 30cm width and of green color.

@@ -1,5 +1,8 @@
-import object.py
+import turtle
+myTurtle = turtle.Turtle(shape="turtle")
+myTurtle.hideturtle()
 
+filePathTriangle = 'triangle.txt'
 class circle(object):
                     #Constructor for the circle
     def __init__(self,color,firstSide,secondSide,thirdSide):
@@ -7,6 +10,7 @@ class circle(object):
         self.firstSide=firstSide
         self.secondSide=secondSide
         self.thirdSide=thirdSide
+
 
 
 

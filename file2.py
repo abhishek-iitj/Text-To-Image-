@@ -18,7 +18,7 @@ grammar = "NP: {<DT>?<JJ>*<NN>}"
 grammar2="LEN: {<$><CD>}"
 chunked = []
 
-cp = nltk.RegexpParser(grammar2)
+cp = nltk.RegexpParser(grammar)
 for s in sentence:
     result=cp.parse(s)
     chunked.append(result)
