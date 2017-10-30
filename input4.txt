@@ -1,0 +1,1 @@
+There is a green color circle having radius 50cm. There is a rectangle of 100cm width and length 50cm and its color is red.

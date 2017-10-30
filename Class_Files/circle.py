@@ -12,7 +12,7 @@ class circle(object):
 
     def drawCircle(Self):
         myTurtle.begin_fill()
-        myTurtle.circle(int(circleRadius))
-        myTurtle.color(circleColor)
+        myTurtle.circle(int(Self.radius))
+        myTurtle.color(Self.color)
         myTurtle.end_fill()
 

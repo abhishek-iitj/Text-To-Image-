@@ -1,1 +1,1 @@
-There is a red color circle of radius 10cm. There is a green color rectangle of length 10cm and width 20cm.
+There is a circle of radius 100cm and color is red. There is a green color rectangle of length 70cm and width 200cm.

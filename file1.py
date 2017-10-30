@@ -7,9 +7,15 @@ import re
 import string
 import configs
 import turtle
+import os
 print configs.color
 
+fileCircle = open('Class_Files/circle.txt', 'w')
+fileRectangle = open('Class_Files/rectangle.txt', 'w')
+fileCount=open('Class_Files/count.txt', 'w')
 
+def getNumber(x):
+  return x[:-2]
 def isMeasurment(x):
   # print x
   y=len(x)
@@ -28,7 +34,7 @@ rectangleCount=0
 lineCount=0
 triangleCount=0
 
-with open('input.txt', 'r') as myfile:
+with open('input4.txt', 'r') as myfile:
     data=myfile.read().replace('\n', '')
 
 data=data.lower()
@@ -56,6 +62,7 @@ for i in range(len(ary)):
   temp= [i for i in word_tokenize(ary[i].lower()) if i not in stop]
 
 print "No. of Circles", circleCount
+
 print "No. of Rectangle", rectangleCount
 
 for i in range(len(ary)):
@@ -80,6 +87,7 @@ for i in range(len(ary)):
       break
 
   if(circle==1):    #try to find radius and color in that sentence
+    circleCount=1
     print "     Found Circle"
     radius=0
     radiusIndex=-1
@@ -92,7 +100,7 @@ for i in range(len(ary)):
       if (wordList[j]=='color'):
         color=1
         colorIndex=j
-
+        print "Color found at index ", j
     if(radius==1):                              #search for the length in the vicinity of radius
       flagR=0       #Radius Flag
       for x in range(radiusIndex, len(wordList)):     #search for the right length in the vicinity of radius
@@ -100,6 +108,8 @@ for i in range(len(ary)):
           circleAttributes['radius']=wordList[x]
           flagR=1
           print "circle radius is ", wordList[x]
+          temp=getNumber(wordList[x])
+          fileCircle.write("radius "+(temp)+"\n")
           break
 
       if (flagR==0):    #not found in right
@@ -107,6 +117,7 @@ for i in range(len(ary)):
           if (isMeasurment(wordList[x])):
             circleAttributes['radius'] = wordList[x]
             print "circle radius is ", wordList[x]
+            fileCircle.write("radius " + (temp) + "\n")
             break
 
     if (color == 1):                  # search for a colorWord in the vicinity of color
@@ -116,15 +127,18 @@ for i in range(len(ary)):
           circleAttributes['color'] = wordList[x]
           flagC=1
           print "circle color is ", wordList[x]
+          fileCircle.write("color " + (wordList[x]) + "\n")
 
       if (flagC == 0):  # not found in left
         for x in range(colorIndex, len(wordList)):  # search for the colorWord in right the vicinity of color
-          if (isMeasurment(wordList[x])):
+          if (isColor(wordList[x])):
             circleAttributes['color'] = wordList[x]
             print "circle radius is ", wordList[x]
+            fileCircle.write("color " + (wordList[x]) + "\n")
             break
 
   if (rectangle== 1):  # try to find radius and color in that sentence
+    rectangleCount=1
     print "     Found Rectangle"
     length = 0
     lengthIndex = -1
@@ -150,6 +164,8 @@ for i in range(len(ary)):
           rectangleAttributes['length'] = wordList[x]
           flagL = 1
           print "Rectangle Length is ", wordList[x]
+          temp = getNumber(wordList[x])
+          fileRectangle.write("length " + (temp) + "\n")
           break
 
       if (flagL == 0):  # not found in right
@@ -157,6 +173,8 @@ for i in range(len(ary)):
           if (isMeasurment(wordList[x])):
             rectangleAttributes['length'] = wordList[x]
             print "Rectangle Length is ", wordList[x]
+            temp = getNumber(wordList[x])
+            fileRectangle.write("length " + (temp) + "\n")
             break
 
     if (width == 1):     # search for the number in the vicinity of width
@@ -166,6 +184,8 @@ for i in range(len(ary)):
           rectangleAttributes['width'] = wordList[x]
           flagW = 1
           print "Rectangle Width is ", wordList[x]
+          temp = getNumber(wordList[x])
+          fileRectangle.write("width " + (temp) + "\n")
           break
 
       if (flagW == 0):  # not found in right
@@ -173,6 +193,8 @@ for i in range(len(ary)):
           if (isMeasurment(wordList[x])):
             rectangleAttributes['width'] = wordList[x]
             print "Rectangle Width is ", wordList[x]
+            temp = getNumber(wordList[x])
+            fileRectangle.write("width " + (temp) + "\n")
             break
 
     if (color == 1):  # search for a colorWord in the vicinity of color
@@ -182,12 +204,18 @@ for i in range(len(ary)):
           rectangleAttributes['color'] = wordList[x]
           flagC = 1
           print "Rectangle color is ", wordList[x]
+          fileRectangle.write("color " + wordList[x] + "\n")
 
       if (flagC == 0):  # not found in left
         for x in range(colorIndex, len(wordList)):  # search for the colorWord in right the vicinity of color
-          if (isMeasurment(wordList[x])):
+          if (isColor(wordList[x])):
             rectangleAttributes['color'] = wordList[x]
             print "Rectangle color is ", wordList[x]
+            fileRectangle.write("color " + wordList[x] + "\n")
 
+if(circleCount>0):
+  fileCount.write('circle '+str(circleCount)+"\n")
+if(int(rectangleCount)>0):
+  fileCount.write('rectangle ' + str(int(rectangleCount))+"\n")
 
-
+# os.system('python Class_Files/main.py')

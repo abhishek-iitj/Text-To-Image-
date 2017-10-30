@@ -5,9 +5,22 @@ import triangle
 import rectangle
 
         #initialising variables for shapes
-cirCle=1
-recTangle=1
+cirCle=0
+recTangle=0
 triAngle=0
+
+fileCount=open("count.txt", 'r')
+for line in fileCount:
+    print line
+    if 'rectangle' in line:
+        recTangle=1
+    if 'circle' in line:
+        cirCle=1
+
+#
+# cirCle=1
+# recTangle=1
+# triAngle=0
 
         # Turtle Drawing variables of python in-built library
 myTurtle = turtle.Turtle(shape="turtle")
