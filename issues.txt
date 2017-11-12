@@ -1,0 +1,9 @@
+File2. py
+
+a. POS are variable
+ which makes the grammar ambigious.
+
+b. Not able to wrote the correct chunks.
+
+c. Tree not formable.
+
