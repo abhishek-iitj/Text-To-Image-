@@ -10,14 +10,17 @@ class rectangle(object):
         self.length=length
         self.width=width
     def drawRectangle(self):
+        myTurtle.penup()
+        myTurtle.setposition(0,-50)
+        myTurtle.pendown()
         myTurtle.begin_fill()
         myTurtle.color(self.color)
         myTurtle.forward(int(self.length))
-        myTurtle.left(90)
+        myTurtle.right(90)
         myTurtle.forward(int(self.width))
-        myTurtle.left(90)
+        myTurtle.right(90)
         myTurtle.forward(int(self.length))
-        myTurtle.left(90)
+        myTurtle.right(90)
         myTurtle.forward(int(self.width))
         myTurtle.end_fill()
 

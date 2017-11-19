@@ -12,14 +12,12 @@ def ie_preprocess(document):
     return sentences
 
 data=''
-with open('input.txt', 'r') as myfile:
+with open('input6.txt', 'r') as myfile:
     data=myfile.read().replace('\n', '')
-    # print data
-    # print 'Hi'
     stop_words = set(stopwords.words('english'))
     word_tokens = word_tokenize(data)
     filtered_sentence = [w for w in word_tokens if not w in stop_words]
-    # print filtered_sentence
+    print filtered_sentence
     data=""
     for i in range(0, len(filtered_sentence)):
         data=data+" "+filtered_sentence[i]
@@ -29,8 +27,8 @@ sentence=ie_preprocess(data)
 #sentence = [("the", "DT"), ("little", "JJ"), ("yellow", "JJ"), ("dog", "NN"), ("barked", "VBD"), ("at", "IN"), ("the", "DT"), ("cat", "NN")]
 grammar = "NP: {<DT>?<JJ>*<NN>}"
 grammar2="LEN: {<CD><IN>*<NN>}"
-grammar3='''MES: {<NN><CD>|<CD><NN>|<\$><CD>|<CD><IN>*<NN>|<CC><CD>}
-            COLOR:{<JJ><NN>|<NN><JJ>}'''
+grammar3='''MES: {<NN><CD>|<CD><NN>|<\$><CD>|<CD><IN>*<NN>|<CC><CD>|<JJ><CD>}
+            COLOR:{<JJ><NN>|<NN><JJ>|<NN><VBZ><JJ>}'''
 chunked = []
 
 cp = nltk.RegexpParser(grammar3)

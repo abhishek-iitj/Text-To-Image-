@@ -13,6 +13,7 @@ print configs.color
 
 fileCircle = open('Class_Files/circle.txt', 'w')
 fileRectangle = open('Class_Files/rectangle.txt', 'w')
+filePlacement = open('Class_Files/placement.txt', 'w')
 fileCount=open('Class_Files/count.txt', 'w')
 fileJSONC=open('Class_Files/circle.txt', 'r')
 fileJSONR=open('Class_Files/rectangle.txt', 'r')
@@ -82,8 +83,10 @@ for i in range(len(ary)):
 print "No. of Circles", circleCount
 print "No. of Rectangle", rectangleCount
 
+container=[]
 for i in range(len(ary)):
   wordList = re.sub("[^\w]", " ", ary[i]).split()
+  container.append(wordList)
   circle=0
   rectangle=0
   triangle=0
@@ -203,9 +206,29 @@ for i in range(len(ary)):
             print "Rectangle color is ", wordList[x]
             fileRectangle.write("color " + wordList[x] + "\n")
 
+
 if(circleCount>0):
       fileCount.write('circle '+str(circleCount)+"\n")
 
 if(int(rectangleCount)>0):
   fileCount.write('rectangle ' + str(int(rectangleCount))+"\n")
+
+#inspecting the position sentecne separately
+# print container[len(container)-2]
+wordList=container[len(container)-2]
+for j in range(len(wordList)):
+    if(wordList[j]=='circle'):
+      circle=1
+      filePlacement.write('circle ')
+    elif (wordList[j]=='rectangle'):
+      rectangle=1
+      filePlacement.write('rectangle ')
+    elif (wordList[j]=='triangle'):
+      triangle=1
+      filePlacement.write('triangle ')
+    elif (wordList[j]=='square'):
+      square=1
+      filePlacement.write('square ')
+    elif (isMeasurment(wordList[j])):
+      filePlacement.write(wordList[j]+" ")
 

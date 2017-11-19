@@ -1,4 +1,5 @@
 File2. py
+After filtering the stopwords
 
 a. POS are variable
  which makes the grammar ambigious.
@@ -6,4 +7,17 @@ a. POS are variable
 b. Not able to wrote the correct chunks.
 
 c. Tree not formable.
+
+__________________________________________-
+
+If we don't filter the stopwords
+Stopswords are being the part of the chunk
+
+______________________________________________
+
+Testing over different types of parts of speech
+string matching works the best for these type of problems having smaller text to parse.
+
+________________________________________________
+
 

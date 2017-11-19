@@ -50,6 +50,7 @@ if(cirCle>0):
         Circle = circle.circle(circleColor, circleRadius)
         Circle.drawCircle()
                 # if there is a rectangle in our text expression
+
 print recTangle
 if (recTangle > 0):
     rectangleLength = ""  # initialising parameters as NULL
@@ -72,7 +73,6 @@ if (recTangle > 0):
     for i in range(0,recTangle):
         Rectangle = rectangle.rectangle(rectangleColor,rectangleLength,rectangleWidth)
         Rectangle.drawRectangle()
-
 
 
 

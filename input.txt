@@ -1,1 +1,2 @@
 Draw a circle of green color and 100cm in radius. A rectangle of color blue and having dimensions of 300cm in length and width 200cm.
+The circle is at 50cm bottom of rectangle.”
