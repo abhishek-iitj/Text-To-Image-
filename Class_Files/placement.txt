@@ -1,1 +1,1 @@
-circle 50cm rectangle 
+circle 50 bottom left rectangle 

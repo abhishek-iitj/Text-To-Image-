@@ -230,5 +230,9 @@ for j in range(len(wordList)):
       square=1
       filePlacement.write('square ')
     elif (isMeasurment(wordList[j])):
+      temp = getNumber(wordList[j])
+      filePlacement.write(str(temp)+" ")
+    elif (isPosition(wordList[j])):
       filePlacement.write(wordList[j]+" ")
+
 
