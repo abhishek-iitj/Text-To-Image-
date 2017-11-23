@@ -53,7 +53,7 @@ rectangleCount=0
 lineCount=0
 triangleCount=0
 
-with open('input.txt', 'r') as myfile:
+with open('input7.txt', 'r') as myfile:
     data=myfile.read().replace('\n', '')
 
 data=data.lower()
@@ -216,23 +216,55 @@ if(int(rectangleCount)>0):
 #inspecting the position sentecne separately
 # print container[len(container)-2]
 wordList=container[len(container)-2]
+placementStr=""
+var=[]
 for j in range(len(wordList)):
     if(wordList[j]=='circle'):
       circle=1
-      filePlacement.write('circle ')
+      placementStr=placementStr+wordList[j]+" "
+      var.append(wordList[j]+" ")
+      # filePlacement.write('circle ')
     elif (wordList[j]=='rectangle'):
       rectangle=1
-      filePlacement.write('rectangle ')
+      placementStr = placementStr + wordList[j] + " "
+      var.append(wordList[j] + " ")
+      # filePlacement.write('rectangle ')
+
     elif (wordList[j]=='triangle'):
       triangle=1
-      filePlacement.write('triangle ')
+      placementStr = placementStr + wordList[j] + " "
+      var.append(wordList[j] + " ")
+      # filePlacement.write('triangle ')
     elif (wordList[j]=='square'):
       square=1
+      placementStr = placementStr + wordList[j] + " "
+      var.append(wordList[j] + " ")
       filePlacement.write('square ')
     elif (isMeasurment(wordList[j])):
       temp = getNumber(wordList[j])
-      filePlacement.write(str(temp)+" ")
+      placementStr = placementStr + str(temp) + " "
+      var.append(str(temp) + " ")
+      # filePlacement.write(str(temp)+" ")
     elif (isPosition(wordList[j])):
-      filePlacement.write(wordList[j]+" ")
+      placementStr = placementStr + wordList[j] + " "
+      var.append(wordList[j] + " ")
+      # filePlacement.write(wordList[j]+" ")
 
+print placementStr
+varx=var[0]
+var[0]=var[len(var)-1]
+var[len(var)-1]=varx
+print var
+placementStr=""
+for i in range (0, len(var)):
+  placementStr+=var[i]
+print placementStr
+filePlacement.write(placementStr)
+# print placementStr
+# filePlacement.read()
+# with open('Class_Files/placement.txt') as f:
+#     content = f.readlines()
+# you may also want to remove whitespace characters like `\n` at the end of each line
+# content = [x.strip() for x in content]
+# print content
 

@@ -1,2 +1,2 @@
-radius 100
+radius 50
 color green

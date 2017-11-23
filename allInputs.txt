@@ -1,0 +1,15 @@
+Draw a rectangle of 10cm length and 5cm width and its color is green. there is a circle of blue color and its radius is 10cm.
+the circle is 100cm top of rectangle.
+
+Draw a rectangle of 70cm length and 40cm width and its color is green. there is a circle of blue color and its radius is 40cm.
+the circle is 100cm bottom of rectangle.
+
+There is a rectangle of 70cm length and 40cm width and its color is green. there is a circle of blue color and its radius is 40cm.
+the circle is 100cm top-left of rectangle.
+
+There is a green color circle having radius 50cm. There is a rectangle of 100cm width and length 50cm and its color is red.
+The circle is 150cm top of rectangle.
+
+Draw a green color circle having dimensions of radius 50cm. Also there is a rectangle of 100cm width and length 50cm and its color is red.
+The circle is 150cm top of rectangle.
+
