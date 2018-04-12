@@ -12,6 +12,7 @@ t0 = DefaultTagger('NN')
 t1 = UnigramTagger(text, backoff=t0)
 t2 = BigramTagger(text, backoff=t1)
 t3 = TrigramTagger(text, backoff=t1)
+default_tagger = nltk.data.load(nltk.tag._POS_TAGGER)
 
 test_sent = brown.sents()[502]
 # test_sent = [u'Noting', u'that', u'Plainfield', u'last', u'year', u'had', u'lost', u'the', u'Mack', u'Truck', u'Co.', u'plant', u',', u'he', u'said', u'industry', u'will', u'not', u'come', u'into', u'this', u'state', u'until', u'there', u'is', u'tax', u'reform', u'.']

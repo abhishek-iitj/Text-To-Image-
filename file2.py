@@ -7,13 +7,14 @@ def ie_preprocess(document):
     sentences = [nltk.word_tokenize(sent) for sent in sentences]
     # print 1
     # print sentences
+    model = {'color': 'COLOR', 'length':'MES', 'width':'MES', 'radius':'MES'}
     sentences = [nltk.pos_tag(sent) for sent in sentences]
     print sentences
     return sentences
 
 data=''
 originaldata=''
-with open('input3.txt', 'r') as myfile:
+with open('input6.txt', 'r') as myfile:
     data=myfile.read().replace('\n', '')
     stop_words = set(stopwords.words('english'))
     word_tokens = word_tokenize(data)
@@ -37,7 +38,7 @@ sentence=ie_preprocess(originaldata)
 #sentence = [("the", "DT"), ("little", "JJ"), ("yellow", "JJ"), ("dog", "NN"), ("barked", "VBD"), ("at", "IN"), ("the", "DT"), ("cat", "NN")]
 grammar = "NP: {<DT>?<JJ>*<NN>}"
 grammar2="LEN: {<CD><IN>*<NN>}"
-grammar3='''MES: {<NN><CD>|<CD><NN>|<\$><CD>|<CD><IN>*<NN>|<CC><CD>|<JJ><CD>|<VBZ><CD>}
+grammar3='''MES: {<NN><CD>|<CD><NN>|<\$><CD>|<CD><IN>*<NN>|<CC><CD>|<JJ><CD>|<CD><JJ>|<VBZ><CD>|<VBP><CD>}
             COLOR:{<NN><NN>|<JJ><NN>|<NN><JJ>|<NN><VBZ><JJ>}'''
 chunked = []
 

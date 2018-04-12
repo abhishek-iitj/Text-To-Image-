@@ -1,1 +1,1 @@
-Draw a circle of radius 100cm and blue in color. Also there is a rectangle of 300cm in length and 500cm in width. The rectangle is red in color.
+Draw a circle of green color and 100cm in radius.

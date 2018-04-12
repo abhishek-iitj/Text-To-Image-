@@ -1,2 +1,1 @@
-Draw a green color circle having dimensions of radius 50cm. Also there is a rectangle of 100cm width and length 50cm and its color is red.
-The circle is 150cm top of rectangle.
+Draw a green color circle having dimensions of radius 50cm. Also there is a rectangle of 100cm width and length 50cm and its color is red. The circle is 150cm top of rectangle.
