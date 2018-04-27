@@ -12,7 +12,7 @@ t0 = DefaultTagger('NN')
 t1 = UnigramTagger(text, backoff=t0)
 t2 = BigramTagger(text, backoff=t1)
 t3 = TrigramTagger(text, backoff=t1)
-default_tagger = nltk.data.load(nltk.tag._POS_TAGGER)
+# default_tagger = nltk.data.load(nltk.tag._POS_TAGGER)
 
 test_sent = brown.sents()[502]
 # test_sent = [u'Noting', u'that', u'Plainfield', u'last', u'year', u'had', u'lost', u'the', u'Mack', u'Truck', u'Co.', u'plant', u',', u'he', u'said', u'industry', u'will', u'not', u'come', u'into', u'this', u'state', u'until', u'there', u'is', u'tax', u'reform', u'.']
@@ -23,27 +23,28 @@ def ie_preprocess(document):
     # print sentences
     trigram_tagger=nltk.TrigramTagger(brown_a, cutoff=0)
     sentences = [nltk.word_tokenize(sent) for sent in sentences]
-    print "Default tagger\n"
+    print "\nDefault tagger"
     x = [t0.tag(sent) for sent in sentences]
     print x
-    print "Unigram tagger\n"
+    print "\nUnigram tagger"
     x = [t1.tag(sent) for sent in sentences]
     print x
-    print "Bigram tagger\n"
+    print "\nBigram tagger"
     x = [t2.tag(sent) for sent in sentences]
     print x
-    print "Trigram tagger\n"
+    print "\nTrigram tagger"
     x = [t3.tag(sent) for sent in sentences]
     print x
+    print "\n"
     # sentences = [nltk.pos_tag(sent) for sent in sentences
     trainer = hmm.HiddenMarkovModelTrainer()
     train_data = treebank.tagged_sents()[:3000]
     tagger = trainer.train_supervised(train_data)
     print tagger
-    print "HMM tagger\n"
+    print "\nHMM tagger"
     x= [tagger.tag(sent) for sent in sentences]
     print x
-    print "POS Tag\n"
+    print "\nPOS Tag"
     sentences = [nltk.pos_tag(sent) for sent in sentences]
     print sentences
     return sentences
@@ -59,20 +60,4 @@ with open('input6.txt', 'r') as myfile:
     for i in range(0, len(filtered_sentence)):
         data=data+" "+filtered_sentence[i]
     print data
-
-
 sentence=ie_preprocess(data)
-# print sentence
-#sentence = [("the", "DT"), ("little", "JJ"), ("yellow", "JJ"), ("dog", "NN"), ("barked", "VBD"), ("at", "IN"), ("the", "DT"), ("cat", "NN")]
-grammar = "NP: {<DT>?<JJ>*<NN>}"
-grammar2="LEN: {<CD><IN>*<NN>}"
-grammar3='''MES: {<NN><CD>|<CD><NN>|<\$><CD>|<CD><IN>*<NN>|<CC><CD>|<JJ><CD>}
-            COLOR:{<JJ><NN>|<NN><JJ>|<NN><VBZ><JJ>}'''
-chunked = []
-
-cp = nltk.RegexpParser(grammar3)
-for s in sentence:
-    result=cp.parse(s)
-    chunked.append(result)
-    result.draw()
-print chunked

@@ -53,7 +53,7 @@ rectangleCount=0
 lineCount=0
 triangleCount=0
 
-with open('input7.txt', 'r') as myfile:
+with open('input.txt', 'r') as myfile:
     data=myfile.read().replace('\n', '')
 
 data=data.lower()

@@ -1,1 +1,2 @@
-There are 2 shapes. Draw a circle of green color and 100cm in radius.  A rectangle of color blue and having dimensions of 300cm in length and width 200cm.  The rectangle is at 50cm bottom-left of circle.
+Draw a rectangle of 100cm length and 50cm width and its color is green. there is a circle of blue color and its radius is 50cm.
+the circle is 200cm top of rectangle.

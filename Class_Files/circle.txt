@@ -1,2 +1,2 @@
 radius 50
-color green
+color blue

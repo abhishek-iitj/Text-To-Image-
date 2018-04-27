@@ -14,7 +14,7 @@ def ie_preprocess(document):
 
 data=''
 originaldata=''
-with open('input6.txt', 'r') as myfile:
+with open('input.txt', 'r') as myfile:
     data=myfile.read().replace('\n', '')
     stop_words = set(stopwords.words('english'))
     word_tokens = word_tokenize(data)
