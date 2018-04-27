@@ -15,8 +15,10 @@ Draw a rectangle of 100cm length and 50cm width and its color is green. there is
   
      -Run these commands in a python shell to get all the packages from NLTK
     
-    ```import nltk```
-    ```nltk.download('all')``` (Takes approx 20-30 minutes)
+    import nltk
+    nltk.download('all') 
+    
+   (Takes approx 20-30 minutes)
     
   3. Python Turtle Library 
   
@@ -40,17 +42,21 @@ Draw a rectangle of 100cm length and 50cm width and its color is green. there is
     
    - All the next algorithms will generate the intermediate results as the output and not the image. 
  
- #### Algorithm 2: POS Chunking(Without context):
+ #### Algorithm 2: POS Chunking (Without context):
  
    - It will generate the chunks as per the grammar rules defined in the file ```file2.py```
   
    - Run the file ```file2.py```
+   
+   - You can see the correct chunks of **COL{Color}**, **MES{Measurements}** in a separate window that pops up for each sentence. 
  
- #### Algorithm 3: POS Chunking(With context):
+ #### Algorithm 3: POS Chunking (With context):
  
    - It will generate the chunks as per the NLTK default taggers taking context into consideration.
   
    - Run the file ```tagger.py```
+   
+   - The output of different taggers(Default Taggers, Unigram, Bigram, Trigram, Hidden Markov Model(HMM) Tagger and pos_tag Taggers) can be seen on the console. 
       
  #### Algorithm 4: (Algorithm 2 + Algorithm 1):
  
@@ -58,7 +64,6 @@ Draw a rectangle of 100cm length and 50cm width and its color is green. there is
   
    - Run the file ```file4.py```
  
-   - You can see the correct chunks of COL{Color}, MES{Measurements} and SHAPE{Shapes}. 
+   - You can see the correct chunks of **COL{Color}**, **MES{Measurements}** and **SHAPE{Shapes}** in a separate window that pops up for each sentence. 
    
-   
- Some of the ouptuts in visual form can be found here. 
+  
