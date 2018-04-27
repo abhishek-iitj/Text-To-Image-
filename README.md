@@ -7,24 +7,24 @@ Draw a rectangle of 100cm length and 50cm width and its color is green. there is
 
 ### Output: [Click Here](https://drive.google.com/file/d/1ET-NEm3_8T4NQtcEwrQ-0ocTo9rLQtEU/view?usp=sharing).
 
-### Prerequisite:
+### Prerequisite Required:
 
   1. Python 2.7
   
   2. Python NLTK Library [Installation](https://www.nltk.org/install.html)
   
-     -Run these commands in a python shell to get all the packages from NLTK
+   - Run these commands in a python shell to get all the packages from NLTK
+   - ```import nltk```
     
-    import nltk
-    nltk.download('all') 
+   - ```nltk.download('all')```
     
-   (Takes approx 20-30 minutes)
+   _(Takes approx 20-30 minutes)_
     
   3. Python Turtle Library 
   
   4. PyCharm IDE (Preferred)
 
-### How to Run the project:
+### How to Run:
 
   1. ```git clone https://github.com/abhishek-iitj/Text-To-Image-.git```
   2. ```cd Text-To-Image```
@@ -56,7 +56,7 @@ Draw a rectangle of 100cm length and 50cm width and its color is green. there is
   
    - Run the file ```tagger.py```
    
-   - The output of different taggers(Default Taggers, Unigram, Bigram, Trigram, Hidden Markov Model(HMM) Tagger and pos_tag Taggers) can be seen on the console. 
+   - The output of different taggers (Default, Unigram, Bigram, Trigram, Hidden Markov Model and pos_tag Taggers) can be seen on the console. 
       
  #### Algorithm 4: (Algorithm 2 + Algorithm 1):
  
@@ -66,4 +66,7 @@ Draw a rectangle of 100cm length and 50cm width and its color is green. there is
  
    - You can see the correct chunks of **COL{Color}**, **MES{Measurements}** and **SHAPE{Shapes}** in a separate window that pops up for each sentence. 
    
+### Report:
+
+Please find the file ```btp cs399 report.pdf``` in the directory. It contains the summary report submitted on 16.04.2018
   
